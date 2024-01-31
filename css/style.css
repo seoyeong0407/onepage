@@ -1,0 +1,396 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,200;7..72,300;7..72,400;7..72,500;7..72,600;7..72,700;7..72,800;7..72,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css'); 
+
+html{scroll-behavior: smooth;}
+
+/* Top & Bottom Button______________ */
+.top{
+  position: fixed;
+  right: 30px;
+  bottom: 100px;
+  z-index: 100;
+}
+.bottom{
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 100;
+}
+.top a, .bottom a{
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #79abd2;
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+  transition: 0.35s;
+}
+.top a:before{
+  content: '\e946';
+  font-family: 'xeicon';
+  font-size: 25px;
+  color: #79abd2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 60px;
+}
+.bottom a:before{
+  content: '\e943';
+  font-family: 'xeicon';
+  font-size: 25px;
+  color: #79abd2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 65px;
+}
+.top a:hover{
+  background-color: #79abd2;
+  transform: translateY(-10px);
+}
+.bottom a:hover{
+  background-color: #79abd2;
+  transform: translateY(10px);
+}
+.top a:hover:before, .bottom a:hover:before{color: #fff;}
+
+
+/* Header______________ */
+header{
+  width: 100%;
+  height: 70px;
+  font-family: 'Literata', serif;
+  padding: 20px 0;
+}
+nav{
+  width: 1400px;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gnb{
+  display: flex;
+}
+.gnb li{margin: 0 15px;}
+.gnb li a{
+  color: #555;
+  font-size: 18px;
+  text-transform: capitalize;
+  transition: 0.35s;
+}
+.gnb li a:hover{
+  color:#79abd2;
+}
+
+
+/* Main______________ */
+main{
+  width: 100%;
+  height: 800px;
+  background: url(../image/main.jpg) no-repeat center top fixed;
+  background-size: cover;
+}
+.title{
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title h1{
+  font-family: 'Herr Von Muellerhoff', sans-serif;
+  color: #fff;
+  font-size: 150px;
+  font-weight: 400;
+  text-shadow: 0 0 10px #555;
+  text-transform: capitalize;
+  position: relative;
+}
+.title strong{
+  color: #fff;
+  font-weight: 400;
+  text-shadow: 0 0 10px #555;
+}
+
+
+/* Section______________ */
+/* wedgwood */
+#wedgwood{
+  text-align: center;
+}
+#wedgwood img{
+  margin: 150px;
+  transition: 0.35s;
+}
+#wedgwood img:hover{
+  filter: blur(3px);
+}
+.content{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+.content p{
+  font-family: 'Literata', serif;
+  text-transform: capitalize;
+  font-size: 48px;
+  font-weight: 400;
+  color: #79abd2;
+}
+.content span{
+  margin-left: 100px;
+}
+iframe{
+  margin-bottom: 150px;
+  border: none;
+}
+
+/* Event */
+#event{
+  width: 100%;
+  height: 600px;
+  background: url(../image/event.jpg) no-repeat center top;
+  background-size: cover;
+  text-align: center;
+}
+#event h2{
+  font-family: 'Literata', serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #fff;
+  padding-top: 150px;
+  text-transform: capitalize;
+}
+#event p{
+  color: #fff;
+  font-size: 24px;
+  padding: 20px 0;
+}
+#event span{
+  color: #fff;
+}
+
+/* Seasonal Item */
+#seasonalitem{
+  width: 100%;
+  height: 800px;
+  background-color: #dce9f3;
+  text-align: center;
+}
+#seasonalitem h2{
+  font-size: 48px;
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding-top: 150px;
+}
+#seasonalitem>p{
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.s_items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.s_item{
+  width: 248px;
+  height: 248px;
+  border: 1px solid #ddd;
+  margin: 10px;
+  position: relative;
+}
+.caption{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(0,0,0,0.7); 
+  color: #fff;
+  padding: 110px 10px;
+  box-sizing: border-box;
+  line-height: 24px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.s_item:hover .caption{opacity: 1;}
+
+
+/* Category */
+#category{
+  text-align: center;
+}
+#category h2{
+  font-size: 48px;
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding-top: 150px;
+}
+#category>p{
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.gallery{
+  width: 900px;
+  height: 492px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 150px;
+}
+.gallery li{
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.gallery li:last-child{border-right: none;}
+.gallery li:nth-child(1){background: url(../image/cups.jpg) no-repeat center center;background-size: cover;}
+.gallery li:nth-child(2){background: url(../image/mugs.jpg) no-repeat center center;background-size: cover;}
+.gallery li:nth-child(3){background: url(../image/teaware.jpg) no-repeat center center;background-size: cover;}
+
+.gallery li:hover{
+  flex: 380px;
+}
+.g_content{
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  height: 250px;
+  text-align: center;
+  padding-top: 230px;
+  text-shadow: 0 0 10px #555;
+  text-transform: capitalize;
+}
+
+/* Collection */
+ul,li {margin:0; padding:0;}
+
+#collection{
+  width: 100%;
+  height: 1200px;
+  background-color: #dce9f3;
+  text-align: center;
+  padding-bottom: 150px;
+}
+#collection h2{
+  font-size: 48px;
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding-top: 150px;
+}
+#collection>p{
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+#collection ul{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+#collection ul li a img{
+  background-color: #fff;
+  display: block;
+}
+.c_items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c_item{
+  width: 294px;
+  height: 294px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.c_item img{transition: 0.35s;}
+.caption2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 120px 0;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(0,0,0,0.7); 
+  color: #fff;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: 0.5s;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.c_item:hover img{transform: scale(1.2);}
+.c_item:hover .caption2{opacity: 1;}
+
+
+/* Button */
+.btn{
+  display: block;
+  margin: auto;
+  color: #fff;
+  width: 150px;
+  height: 50px;
+  background-color: #79abd2;
+  line-height: 50px;
+  text-align: center;
+  transition: 0.35s;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.btn:hover{
+  background-color: #285579;
+}
+
+
+/* Footer______________ */
+#bottom{
+  font-style: normal;
+  background-color: #285579;
+  color: #fff;
+  padding: 80px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.f_logo{
+  margin-bottom: 30px;
+}
+.f_menu{
+  display: flex;
+  position: relative;
+  color: #9CA9BE;
+  margin-top: 30px;
+}
+.f_menu li{margin-right: 20px;}
+.f_center{margin-right: 30px;}
+.f_center .f_cs h4{margin-bottom: 10px;}
+.f_center .f_cs p span:nth-child(1){
+  font-family: 'Literata', serif;
+  font-size: 30px;
+}
+.f_center .f_sns h4{
+  text-transform: capitalize;
+  margin-top: 30px;
+}
+.f_sns a:nth-of-type(1)::before{
+  content: '\f16d';
+  font-family: fontawesome;
+  font-size: 15px;
+  margin-right: 10px;
+}
+.f_sns a:nth-of-type(2)::before{
+  content: '\f09a';
+  font-family: fontawesome;
+  font-size: 15px;
+}
+.f_right .f_map h4{margin-bottom: 30px;}
